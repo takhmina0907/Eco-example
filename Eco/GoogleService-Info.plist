@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>447977108663-2nn160cfp6saf0rlq3angrl73vof1rfk.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.447977108663-2nn160cfp6saf0rlq3angrl73vof1rfk</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCMKEQxaoQMKiiOEGicYT6ojX87q-yZNN4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>447977108663</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>SDU.Eco</string>
+	<key>PROJECT_ID</key>
+	<string>ecoquest-61aa9</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ecoquest-61aa9.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:447977108663:ios:980d08910806a8cc</string>
+	<key>DATABASE_URL</key>
+	<string>https://ecoquest-61aa9.firebaseio.com</string>
+</dict>
+</plist>
