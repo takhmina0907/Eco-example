@@ -6,14 +6,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Eco" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Eco" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,7 +87,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bs-Vi-AEX">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bs-Vi-AEX" customClass="ShadowView" customModule="Eco" customModuleProvider="target">
                                 <rect key="frame" x="15.5" y="154.5" width="343" height="358"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RV9-lQ-RUh">
@@ -166,12 +167,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ttZ-Af-SE9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="213.59999999999999" y="229.83508245877064"/>
+            <point key="canvasLocation" x="153" y="230"/>
         </scene>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="KWS-7X-U0J">
             <objects>
-                <viewController id="fPJ-9p-tfi" sceneMemberID="viewController">
+                <viewController id="fPJ-9p-tfi" customClass="MainVC" customModule="Eco" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3JE-UQ-MTy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,8 +184,11 @@
                                     <constraint firstAttribute="width" constant="25" id="Yn5-fH-KKp"/>
                                 </constraints>
                                 <state key="normal" image="close"/>
+                                <connections>
+                                    <segue destination="L7C-x4-kqi" kind="show" id="tJq-i7-WX8"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0iU-th-J5b">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0iU-th-J5b" customClass="ShadowView" customModule="Eco" customModuleProvider="target">
                                 <rect key="frame" x="16" y="85" width="343" height="358"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cDc-Yn-PdD">
@@ -218,24 +222,44 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwV-OH-kBq">
+                                        <rect key="frame" x="143" y="313" width="57" height="37"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                        <state key="normal" title="Sign in">
+                                            <color key="titleColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signinBtnTapped:" destination="fPJ-9p-tfi" eventType="touchUpInside" id="9ya-pP-KL1"/>
+                                            <segue destination="i4A-5B-udu" kind="show" id="56e-XK-L62"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="do3-lK-DKC">
+                                        <rect key="frame" x="96" y="266.5" width="150" height="37"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                        <state key="normal" title="Create an account">
+                                            <color key="titleColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="createBtnTapped:" destination="fPJ-9p-tfi" eventType="touchUpInside" id="WOM-uF-yD0"/>
+                                            <segue destination="i4A-5B-udu" kind="show" id="oqy-cR-ROU"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.60209760273972601" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="do3-lK-DKC" secondAttribute="trailing" constant="97" id="0GS-s1-vxe"/>
                                     <constraint firstAttribute="trailing" secondItem="cDc-Yn-PdD" secondAttribute="trailing" constant="20" id="4rl-2g-WQT"/>
                                     <constraint firstAttribute="width" constant="343" id="56i-i7-jrj"/>
                                     <constraint firstItem="cDc-Yn-PdD" firstAttribute="top" secondItem="0iU-th-J5b" secondAttribute="top" constant="20" id="IbE-CU-U4C"/>
                                     <constraint firstItem="cDc-Yn-PdD" firstAttribute="leading" secondItem="0iU-th-J5b" secondAttribute="leading" constant="20" id="gZ7-6k-AOj"/>
                                     <constraint firstAttribute="height" constant="358" id="iGb-Ld-rrX"/>
+                                    <constraint firstItem="do3-lK-DKC" firstAttribute="top" secondItem="cDc-Yn-PdD" secondAttribute="bottom" constant="86" id="kRV-zP-meR"/>
+                                    <constraint firstItem="TwV-OH-kBq" firstAttribute="leading" secondItem="0iU-th-J5b" secondAttribute="leadingMargin" constant="135" id="mJ9-WS-1SM"/>
+                                    <constraint firstItem="do3-lK-DKC" firstAttribute="leading" secondItem="0iU-th-J5b" secondAttribute="leading" constant="96" id="tfM-1W-rSi"/>
+                                    <constraint firstItem="TwV-OH-kBq" firstAttribute="bottom" secondItem="0iU-th-J5b" secondAttribute="bottomMargin" id="z7o-3e-r5a"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="TwV-OH-kBq" secondAttribute="trailing" constant="135" id="zdU-qO-mcV"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwV-OH-kBq">
-                                <rect key="frame" x="159" y="385" width="57" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                <state key="normal" title="Sign in">
-                                    <color key="titleColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.52941176469999995" green="0.83137254900000002" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -247,10 +271,42 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WDg-tN-hQy"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="RhW-Ds-fzy" id="f46-4s-2Ij"/>
+                        <outlet property="passwordTextField" destination="EJ1-xV-yHG" id="Ty6-Vw-iCI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZm-C4-sb9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="864.79999999999995" y="229.83508245877064"/>
+            <point key="canvasLocation" x="865" y="230"/>
+        </scene>
+        <!--LoggedVC-->
+        <scene sceneID="rgw-kc-8I5">
+            <objects>
+                <viewController storyboardIdentifier="LoggedVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="i4A-5B-udu" customClass="LoggedVC" customModule="Eco" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O1m-SU-1bd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rc6-8d-edB">
+                                <rect key="frame" x="310" y="20" width="59" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutTapped:" destination="i4A-5B-udu" eventType="touchUpInside" id="DEW-ap-pja"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.52941176469999995" green="0.83137254900000002" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="3Ju-FM-iWc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zPG-Mr-H4s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1544.8" y="229.83508245877064"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cKW-Te-qSI">
@@ -499,6 +555,7 @@
         <image name="think-green" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9wQ-5b-2WU"/>
+        <segue reference="oqy-cR-ROU"/>
+        <segue reference="tJq-i7-WX8"/>
     </inferredMetricsTieBreakers>
 </document>
