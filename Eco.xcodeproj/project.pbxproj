@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B39C307210F3F1200C3CE1A /* LoggedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B39C306210F3F1200C3CE1A /* LoggedVC.swift */; };
+		2B39C347210F79A000C3CE1A /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B39C346210F79A000C3CE1A /* MapVC.swift */; };
 		2BF8641F2104DD1300A6D153 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8641E2104DD1300A6D153 /* AppDelegate.swift */; };
 		2BF864212104DD1300A6D153 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF864202104DD1300A6D153 /* MainVC.swift */; };
 		2BF864242104DD1300A6D153 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BF864222104DD1300A6D153 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		2B39C306210F3F1200C3CE1A /* LoggedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedVC.swift; sourceTree = "<group>"; };
+		2B39C346210F79A000C3CE1A /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		2BF8641B2104DD1300A6D153 /* Eco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF8641E2104DD1300A6D153 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BF864202104DD1300A6D153 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				2BF864202104DD1300A6D153 /* MainVC.swift */,
 				2BF864AB210B2F2A00A6D153 /* MyPageViewController.swift */,
 				2B39C306210F3F1200C3CE1A /* LoggedVC.swift */,
+				2B39C346210F79A000C3CE1A /* MapVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				2BF864AC210B2F2A00A6D153 /* MyPageViewController.swift in Sources */,
 				2BF864212104DD1300A6D153 /* MainVC.swift in Sources */,
 				2BF864322104EF7800A6D153 /* BorderBtn.swift in Sources */,
+				2B39C347210F79A000C3CE1A /* MapVC.swift in Sources */,
 				2BF8641F2104DD1300A6D153 /* AppDelegate.swift in Sources */,
 				2BF86504210E041700A6D153 /* ShadowView.swift in Sources */,
 			);
